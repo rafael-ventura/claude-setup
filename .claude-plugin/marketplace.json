@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rafael-setup",
+  "description": "Rafael's personal Claude Code setup: spec-driven workflow, .NET agents and guardrail hooks.",
+  "owner": { "name": "Rafael Siqueira", "email": "raf4ael@gmail.com" },
+  "plugins": [
+    {
+      "name": "flowkit",
+      "description": "Spec-driven development flow (spec, plan, tasks, implement), .NET and messaging agents, and guardian hooks.",
+      "source": "./plugins/flowkit",
+      "category": "development"
+    }
+  ]
+}

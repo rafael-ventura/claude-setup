@@ -1,0 +1,6 @@
+{
+  "name": "flowkit",
+  "description": "Spec-driven development flow (spec, plan, tasks, implement), .NET and messaging agents, and guardian hooks.",
+  "version": "0.1.0",
+  "author": { "name": "Rafael Siqueira", "email": "raf4ael@gmail.com" }
+}
