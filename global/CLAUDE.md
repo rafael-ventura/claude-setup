@@ -16,7 +16,12 @@
 - Checking a running web app: Playwright MCP for scripted checks, Claude in Chrome when my logged-in browser is needed.
 - GitHub: the `gh` CLI.
 
+## How to work
+- **Think before coding.** State assumptions; if a requirement is ambiguous, ask instead of guessing.
+- **Simplest thing that works.** No speculative abstractions, options or layers nobody asked for.
+- **Surgical changes.** Touch only what the task needs and match the surrounding style. Note unrelated problems as follow-ups instead of fixing them in passing.
+- **Verify, then claim.** Don't say something works until it was built, run or tested. Say plainly what was not verified.
+
 ## Working rules
 - Never push, deploy, publish or change account settings without asking first.
-- Non-trivial features go through the flowkit flow: `/flowkit:spec` → `/flowkit:plan` → `/flowkit:tasks` → `/flowkit:implement`.
-- Don't claim something works until it was built, run or tested. Say what was not verified.
+- Start building with `/flowkit:develop`; it picks the direct path or the spec flow by size.

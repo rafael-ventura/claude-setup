@@ -1,5 +1,5 @@
 {
-  "description": "Guardians: block edits to secret files, block commits that stage secrets, block force-push to main, enforce per-project forbidden characters and run a project check before push.",
+  "description": "Guardians: block edits to secret files, block commits that stage secrets, block force-push to main, enforce per-project forbidden text, run a project check before push and run per-project formatters after edits.",
   "hooks": {
     "PreToolUse": [
       {
@@ -9,6 +9,18 @@
             "type": "command",
             "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.mjs\"",
             "timeout": 300
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/after-edit.mjs\"",
+            "timeout": 150
           }
         ]
       }

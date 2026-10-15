@@ -19,7 +19,14 @@ claude plugin marketplace add $repo
 claude plugin install flowkit@rafael-setup
 Write-Host 'flowkit plugin installed'
 
-# 3. MCP servers at user scope (removed first so re-running updates them)
+# 3. Language servers: diagnostics right after each edit, through Anthropic's official LSP plugins
+dotnet tool update --global csharp-ls
+npm install -g typescript-language-server typescript
+claude plugin install csharp-lsp@claude-plugins-official
+claude plugin install typescript-lsp@claude-plugins-official
+Write-Host 'C# and TypeScript language servers installed'
+
+# 4. MCP servers at user scope (removed first so re-running updates them)
 function Add-Mcp([string]$name, [string[]]$addArgs) {
     claude mcp remove -s user $name 2>$null | Out-Null
     claude mcp add -s user $name @addArgs
