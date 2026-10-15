@@ -1,6 +1,6 @@
 ---
 name: plan
-description: Turn an approved specs/NNN-slug/spec.md into plan.md, the technical approach (files, contracts, data, risks, test strategy). Use after /flowkit:spec is approved, or when the user asks how to implement a spec.
+description: Turn an approved specs/NNN-slug/spec.md into plan.md, the technical approach (files, contracts, data, risks, test strategy). Use after /workbench:spec is approved, or when the user asks how to implement a spec.
 ---
 
 # Plan: decide the how
@@ -13,7 +13,7 @@ Read `specs/NNN-*/spec.md` (ask which one if there are several drafts) and write
 2. **Pick one approach.** If there are real alternatives, list them in one line each with the trade-off, then commit to one and say why.
 3. **Write `plan.md`** with the template below.
 4. **Check against the spec.** Every requirement and acceptance criterion must map to something in the plan. Flag gaps instead of silently dropping them.
-5. **Stop and show the plan.** Next step is `/flowkit:tasks`.
+5. **Stop and show the plan.** Next step is `/workbench:tasks`.
 
 ## Template
 

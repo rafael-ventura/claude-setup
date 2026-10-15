@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Execute specs/NNN-slug/tasks.md one task at a time, verifying and ticking each box, then review the result. Use after /flowkit:tasks is approved, or when the user says to implement or continue a spec.
+description: Execute specs/NNN-slug/tasks.md one task at a time, verifying and ticking each box, then review the result. Use after /workbench:tasks is approved, or when the user says to implement or continue a spec.
 ---
 
 # Implement: build it task by task

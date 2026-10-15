@@ -11,7 +11,7 @@ Read the request and the code it touches, then classify:
 | Size | Signals | Path |
 |---|---|---|
 | Small | One area, clear behavior, under ~100 changed lines, no new contracts | Direct, section 2 |
-| Feature | New behavior across layers, new endpoints, messages or tables, unclear rules | `/flowkit:spec` → `plan` → `tasks` → `implement` |
+| Feature | New behavior across layers, new endpoints, messages or tables, unclear rules | `/workbench:spec` → `plan` → `tasks` → `implement` |
 | Bug | Something that used to work or should work | `trace` the flow, reproduce, then fix as Small with a regression test from `unit-tests` |
 
 Tell the user which path you picked in one line. They can override it.

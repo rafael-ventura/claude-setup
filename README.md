@@ -1,6 +1,6 @@
-# flowkit
+# workbench-ai
 
-A Claude Code toolkit for shipping software faster **without lowering the bar**. It bundles three
+**workbench** is a Claude Code toolkit for shipping software faster **without lowering the bar**. It bundles three
 things that work together:
 
 - **Skills** that encode a working method: how to review, test, trace a flow, write unit tests,
@@ -52,42 +52,42 @@ The kit multiplies what you already know. It does not replace it.
 ## Skills
 
 Eighteen skills, grouped by the moment you need them. Each is a short Markdown file in
-`plugins/flowkit/skills/`; read them, they are the method written down.
+`plugins/workbench/skills/`; read them, they are the method written down.
 
 ### Understand
 | Command | What it does |
 |---|---|
-| `/flowkit:trace` | Follows a flow from the entry point through every layer, message and query, and draws a sequence diagram. Run it before changing unfamiliar code. |
-| `/flowkit:read-docs` | Reads PDFs and images as engineering input: specs, standards, vendor manuals, error screenshots, mockups and diagrams. Every extracted rule keeps its page number. |
-| `/flowkit:learn` | Teaches a new technology by mapping it to what you know, using your own repo as material, and leaves exercises for you to solve. |
+| `/workbench:trace` | Follows a flow from the entry point through every layer, message and query, and draws a sequence diagram. Run it before changing unfamiliar code. |
+| `/workbench:read-docs` | Reads PDFs and images as engineering input: specs, standards, vendor manuals, error screenshots, mockups and diagrams. Every extracted rule keeps its page number. |
+| `/workbench:learn` | Teaches a new technology by mapping it to what you know, using your own repo as material, and leaves exercises for you to solve. |
 
 ### Build
 | Command | What it does |
 |---|---|
-| `/flowkit:develop` | The entry point. Sizes the request and takes the direct path for small changes or the spec flow for features. |
-| `/flowkit:spec` → `:plan` → `:tasks` → `:implement` | Spec-driven flow: what and why, then how, then small verifiable steps, then the build. Each step stops for your review. |
-| `/flowkit:refactor` | Changes structure without changing behavior: characterization tests first, one mechanical step at a time. |
-| `/flowkit:upgrade-dotnet` | .NET Framework to modern .NET, version bumps and package updates, project by project, always green. |
+| `/workbench:develop` | The entry point. Sizes the request and takes the direct path for small changes or the spec flow for features. |
+| `/workbench:spec` → `:plan` → `:tasks` → `:implement` | Spec-driven flow: what and why, then how, then small verifiable steps, then the build. Each step stops for your review. |
+| `/workbench:refactor` | Changes structure without changing behavior: characterization tests first, one mechanical step at a time. |
+| `/workbench:upgrade-dotnet` | .NET Framework to modern .NET, version bumps and package updates, project by project, always green. |
 
 ### Verify
 | Command | What it does |
 |---|---|
-| `/flowkit:unit-tests` | Tests that protect behavior and edge cases, proven by breaking the code once on purpose. |
-| `/flowkit:test` | Runs the app and checks it for real with Playwright, Chrome or HTTP calls, including the browser console and queues. |
-| `/flowkit:review` | Code review of a diff, branch or PR. Reports only bugs it can back with a concrete failure scenario. |
+| `/workbench:unit-tests` | Tests that protect behavior and edge cases, proven by breaking the code once on purpose. |
+| `/workbench:test` | Runs the app and checks it for real with Playwright, Chrome or HTTP calls, including the browser console and queues. |
+| `/workbench:review` | Code review of a diff, branch or PR. Reports only bugs it can back with a concrete failure scenario. |
 
 ### Fix
 | Command | What it does |
 |---|---|
-| `/flowkit:debug` | Reproduce, gather evidence, test one hypothesis at a time, fix the root cause, add a regression test. |
-| `/flowkit:incident` | War-room mode: impact, mitigation first, a timeline from logs and deploys, then a blameless postmortem. Read-only on production. |
-| `/flowkit:sql-tune` | Slow SQL Server or PostgreSQL queries and ORM-generated SQL: execution plans, indexes, rewrites, measured before and after. |
+| `/workbench:debug` | Reproduce, gather evidence, test one hypothesis at a time, fix the root cause, add a regression test. |
+| `/workbench:incident` | War-room mode: impact, mitigation first, a timeline from logs and deploys, then a blameless postmortem. Read-only on production. |
+| `/workbench:sql-tune` | Slow SQL Server or PostgreSQL queries and ORM-generated SQL: execution plans, indexes, rewrites, measured before and after. |
 
 ### Ship and record
 | Command | What it does |
 |---|---|
-| `/flowkit:git` | Branches, commits, PRs and conflict resolution that reads the intent of both sides, asking before anything destructive. |
-| `/flowkit:adr` | Records an architecture decision with context, real options and consequences, while it's still fresh. |
+| `/workbench:git` | Branches, commits, PRs and conflict resolution that reads the intent of both sides, asking before anything destructive. |
+| `/workbench:adr` | Records an architecture decision with context, real options and consequences, while it's still fresh. |
 
 **Agents:** `dotnet-bug-hunter` investigates .NET exceptions and failing tests;
 `messaging-reviewer` checks consumers, publishers, outbox and sagas for duplicates, lost
@@ -151,4 +151,4 @@ Prerequisites: Claude Code, Node 22, the .NET SDK, Serena (`serena.exe` in `~/.l
 
 ## Updating
 
-Edit the files here, then run `claude plugin marketplace update rafael-setup` and restart Claude Code.
+Edit the files here, then run `claude plugin marketplace update workbench-ai` and restart Claude Code.

@@ -24,4 +24,4 @@
 
 ## Working rules
 - Never push, deploy, publish or change account settings without asking first.
-- Start building with `/flowkit:develop`; it picks the direct path or the spec flow by size.
+- Start building with `/workbench:develop`; it picks the direct path or the spec flow by size.

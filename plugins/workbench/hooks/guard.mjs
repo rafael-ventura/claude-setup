@@ -18,7 +18,7 @@ const SECRET_FILE = /(^|[\\/])(\.env(\.[\w-]+)?|credentials\.json|secrets?\.(jso
 const SECRET_ALLOWED = /\.env\.(example|sample|template)$|\.env-example$/i;
 
 function block(message) {
-  process.stderr.write(`[flowkit guardian] ${message}\n`);
+  process.stderr.write(`[workbench guardian] ${message}\n`);
   process.exit(2);
 }
 

@@ -13,7 +13,7 @@ Write the spec for one feature. **No code and no implementation plan in this ste
 2. **Ask before assuming.** If the goal, the users, the data or the edge cases are unclear, ask up to 5 focused questions in one batch. Don't invent business rules.
 3. **Create the folder.** `specs/NNN-short-slug/` at the repo root, where NNN is the next free 3-digit number.
 4. **Write `spec.md`** with the template below. Every acceptance criterion must be testable.
-5. **Stop and show the spec.** Next step is `/flowkit:plan`, only after the user approves.
+5. **Stop and show the spec.** Next step is `/workbench:plan`, only after the user approves.
 
 ## Template
 

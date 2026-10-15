@@ -1,6 +1,6 @@
 ---
 name: tasks
-description: Break an approved specs/NNN-slug/plan.md into tasks.md, a checklist of small, ordered, verifiable steps. Use after /flowkit:plan is approved.
+description: Break an approved specs/NNN-slug/plan.md into tasks.md, a checklist of small, ordered, verifiable steps. Use after /workbench:plan is approved.
 ---
 
 # Tasks: slice the plan
@@ -23,4 +23,4 @@ Read `spec.md` and `plan.md` in the same folder and write `tasks.md`.
 - [ ] T2: ... (verify: ...)
 ```
 
-Stop and show the list. Next step is `/flowkit:implement`.
+Stop and show the list. Next step is `/workbench:implement`.

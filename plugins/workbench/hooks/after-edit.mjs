@@ -39,7 +39,7 @@ process.stdin.on('end', () => {
       execSync(command, { cwd: projectDir, stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8', timeout: 120_000 });
     } catch (err) {
       const output = `${err.stdout ?? ''}${err.stderr ?? ''}`.trim().split('\n').slice(-20).join('\n');
-      process.stderr.write(`[flowkit guardian] "${command}" failed after editing ${file}:\n${output}\n`);
+      process.stderr.write(`[workbench guardian] "${command}" failed after editing ${file}:\n${output}\n`);
       process.exit(2);
     }
   }

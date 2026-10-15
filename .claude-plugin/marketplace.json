@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "rafael-setup",
-  "description": "Rafael's personal Claude Code setup: spec-driven workflow, .NET agents and guardrail hooks.",
+  "name": "workbench-ai",
+  "description": "Skills, MCP servers and guardrail hooks for Claude Code: a workbench for shipping software faster without lowering the bar.",
   "owner": { "name": "Rafael Siqueira", "email": "raf4ael@gmail.com" },
   "plugins": [
     {
-      "name": "flowkit",
+      "name": "workbench",
       "description": "Spec-driven development flow (spec, plan, tasks, implement), .NET and messaging agents, and guardian hooks.",
-      "source": "./plugins/flowkit",
+      "source": "./plugins/workbench",
       "category": "development"
     }
   ]

@@ -14,10 +14,10 @@ if ((Test-Path $target) -and ((Get-FileHash $target).Hash -ne (Get-FileHash $sou
 Copy-Item $source $target -Force
 Write-Host 'Global CLAUDE.md installed'
 
-# 2. Plugin marketplace (this repo) and the flowkit plugin
+# 2. Plugin marketplace (this repo) and the workbench plugin
 claude plugin marketplace add $repo
-claude plugin install flowkit@rafael-setup
-Write-Host 'flowkit plugin installed'
+claude plugin install workbench@workbench-ai
+Write-Host 'workbench plugin installed'
 
 # 3. Language servers: diagnostics right after each edit, through Anthropic's official LSP plugins
 dotnet tool update --global csharp-ls
