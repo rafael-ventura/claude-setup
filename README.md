@@ -51,18 +51,47 @@ The kit multiplies what you already know. It does not replace it.
 
 ## Skills
 
+Eighteen skills, grouped by the moment you need them. Each is a short Markdown file in
+`plugins/flowkit/skills/`; read them, they are the method written down.
+
+### Understand
 | Command | What it does |
 |---|---|
-| `/flowkit:develop` | Entry point: sizes the request and takes the direct path or the spec flow |
-| `/flowkit:spec` → `:plan` → `:tasks` → `:implement` | Spec-driven flow for features, one reviewed file per step in `specs/NNN-slug/` |
-| `/flowkit:trace` | Follows a flow end to end, across layers and messages, with a sequence diagram |
-| `/flowkit:review` | Code review of a diff, branch or PR: correctness first, then data, security, messaging, tests |
-| `/flowkit:unit-tests` | Tests that protect behavior and edge cases, proven by breaking the code once |
-| `/flowkit:test` | Runs the app and checks it end to end with Playwright, Chrome or real HTTP calls |
-| `/flowkit:git` | Branches, commits, PRs and conflict resolution, asking before anything destructive |
+| `/flowkit:trace` | Follows a flow from the entry point through every layer, message and query, and draws a sequence diagram. Run it before changing unfamiliar code. |
+| `/flowkit:read-docs` | Reads PDFs and images as engineering input: specs, standards, vendor manuals, error screenshots, mockups and diagrams. Every extracted rule keeps its page number. |
+| `/flowkit:learn` | Teaches a new technology by mapping it to what you know, using your own repo as material, and leaves exercises for you to solve. |
 
-Agents: `dotnet-bug-hunter` for .NET errors and failing tests, `messaging-reviewer` for consumers,
-publishers, outbox and sagas.
+### Build
+| Command | What it does |
+|---|---|
+| `/flowkit:develop` | The entry point. Sizes the request and takes the direct path for small changes or the spec flow for features. |
+| `/flowkit:spec` → `:plan` → `:tasks` → `:implement` | Spec-driven flow: what and why, then how, then small verifiable steps, then the build. Each step stops for your review. |
+| `/flowkit:refactor` | Changes structure without changing behavior: characterization tests first, one mechanical step at a time. |
+| `/flowkit:upgrade-dotnet` | .NET Framework to modern .NET, version bumps and package updates, project by project, always green. |
+
+### Verify
+| Command | What it does |
+|---|---|
+| `/flowkit:unit-tests` | Tests that protect behavior and edge cases, proven by breaking the code once on purpose. |
+| `/flowkit:test` | Runs the app and checks it for real with Playwright, Chrome or HTTP calls, including the browser console and queues. |
+| `/flowkit:review` | Code review of a diff, branch or PR. Reports only bugs it can back with a concrete failure scenario. |
+
+### Fix
+| Command | What it does |
+|---|---|
+| `/flowkit:debug` | Reproduce, gather evidence, test one hypothesis at a time, fix the root cause, add a regression test. |
+| `/flowkit:incident` | War-room mode: impact, mitigation first, a timeline from logs and deploys, then a blameless postmortem. Read-only on production. |
+| `/flowkit:sql-tune` | Slow SQL Server or PostgreSQL queries and ORM-generated SQL: execution plans, indexes, rewrites, measured before and after. |
+
+### Ship and record
+| Command | What it does |
+|---|---|
+| `/flowkit:git` | Branches, commits, PRs and conflict resolution that reads the intent of both sides, asking before anything destructive. |
+| `/flowkit:adr` | Records an architecture decision with context, real options and consequences, while it's still fresh. |
+
+**Agents:** `dotnet-bug-hunter` investigates .NET exceptions and failing tests;
+`messaging-reviewer` checks consumers, publishers, outbox and sagas for duplicates, lost
+messages, retries and poison messages.
 
 ## Guardians
 
@@ -94,6 +123,7 @@ Installed for every project:
 | C# and TypeScript language servers | Errors right after each edit (Anthropic's official LSP plugins) |
 | Context7 | Current, version-specific docs for third-party libraries |
 | Microsoft Learn | Official .NET and Azure documentation |
+| NuGet (official, Microsoft) | Package versions published after the model's training, vulnerabilities and compatible updates |
 | Playwright | Scripted browser checks; Claude in Chrome covers logged-in sessions |
 
 Add per project, in that repo's `.mcp.json`, because they need connection details:
@@ -102,6 +132,8 @@ Add per project, in that repo's `.mcp.json`, because they need connection detail
 |---|---|
 | [Postgres MCP Pro](https://github.com/crystaldba/postgres-mcp) | Postgres projects: schema, explain plans, index tuning. Use a read-only user |
 | [Azure DevOps](https://github.com/microsoft/azure-devops-mcp) (`@azure-devops/mcp`) | Work items, repos and pipelines on Azure DevOps |
+| [Aspire MCP](https://aspire.dev/get-started/aspire-mcp-server/) and [aspire-skills](https://github.com/microsoft/aspire-skills) | Aspire apps: resources, logs and traces of the running app. Both official from Microsoft |
+| [RabbitMQ](https://github.com/amazon-mq/mcp-server-rabbitmq) | Inspect queues, bindings and error queues of a local broker while debugging messaging |
 | A SQL Server MCP | SQL Server projects. There's no official one yet; prefer a read-only login |
 
 Left out on purpose: the GitHub MCP, because the `gh` CLI does the same with less context; Memory

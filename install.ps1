@@ -36,6 +36,7 @@ Add-Mcp 'serena' @('--', "$env:USERPROFILE\.local\bin\serena.exe", 'start-mcp-se
 Add-Mcp 'roslyn' @('-e', 'DOTNET_ROLL_FORWARD=Major', '--', "$env:USERPROFILE\.dotnet\tools\roslyn-mcp.exe")
 Add-Mcp 'context7' @('--transport', 'http', 'https://mcp.context7.com/mcp')
 Add-Mcp 'microsoft-learn' @('--transport', 'http', 'https://learn.microsoft.com/api/mcp')
+Add-Mcp 'nuget' @('--', 'cmd', '/c', 'dnx', 'NuGet.Mcp.Server', '--source', 'https://api.nuget.org/v3/index.json', '--yes')
 Add-Mcp 'playwright' @('--', 'npx', '-y', '@playwright/mcp@latest')
 
 claude mcp list
